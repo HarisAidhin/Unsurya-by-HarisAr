@@ -1,0 +1,107 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Image/cropped-logo_kotak_unsurya.png">
+    <title>Universitas Dirgantara Marsekal Suryadarma</title>
+    <meta name="description" content="Website resmi Universitas Dirgantara Marsekal Suryadarma">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-image">
+                <img src="Image/headeruns.jpg" alt="Kampus Universitas Dirgantara Marsekal Suryadarma">
+                <h1>Visi & misi</h1>
+            </div>
+            
+            <nav class="navbar">
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="index.html" ><i class="fas fa-home"></i> Beranda</a></li>
+                    <li class="dropdown">
+                        <a href="profil.html"><i class="fas fa-university"></i> Profil <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="visimisi.html"class="active">Visi Misi</a></li>
+                            <li><a href="akreditas.html">Akreditas</a></li>                   
+                            <li><a href="tentangkami.html">Tentang kami</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-graduation-cap"></i> Program Studi <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sisteminformasi.html">Sistem Informasi</a></li>
+                            <li><a href="manajemeninformatika.html">Manajemen Informatika</a></li>
+                        </ul>
+                    </li> 
+                    <li><a href="rektor.html"><i class="fas fa-user-tie"></i> Rektor</a></li>   
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-info-circle"></i> Informasi <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="alumni.html">Alumni</a></li>
+                            <li><a href="kerjasama.html">Kerjasama</a></li>
+                        </ul>
+                    </li>    
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-ellipsis-h"></i> Lainnya <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="fasilitas.html">Fasilitas</a></li>
+                            <li><a href="fakultas.html">Fakultas</a></li>
+                            <li><a href="agenda.html">Agenda</a></li>
+                            <li><a href="berita.html">Berita</a></li>
+                            <li><a href="perminatan.html">Perminatan</a></li>
+                            <li><a href="jadwal kegiatan.html">Jadwal kegiatan</a></li>
+                        </ul>
+                    </li>   
+                </ul>
+            </nav>
+        </header>
+<div class="isiVisi">
+  <div class="visi-misi-grid">
+    <div class="visi-section">
+      <h2>Visi</h2>
+      <p>“To become a Center of Excellence in higher education in aerospace and related fields, developed both nationally and internationally, with graduates who are ready to enter the workforce.”</p>
+    </div>
+    <div class="misi-section">
+      <h2>Misi</h2>
+      <ul>
+        <li><i class="fas fa-check-circle"></i> To provide excellent higher education in the field of aerospace and related disciplines, producing graduates who are independent, of strong character, professional, and ready to contribute in the workforce.</li>
+        <li><i class="fas fa-check-circle"></i> To serve as a higher education institution that acts as an agent of change in aerospace technology and related fields developed at UNSURYA.</li>
+        <li><i class="fas fa-check-circle"></i> To implement excellent, equitable, and sustainable higher education governance and management.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    document.getElementById('mobile-menu').addEventListener('click', function () {
+        document.getElementById('nav-list').classList.toggle('active');
+        this.classList.toggle('active');
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+        link.addEventListener('click', function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                const dropdown = this.parentElement;
+                dropdown.classList.toggle('active');
+            }
+        });
+    });
+</script>
+    </html>
